@@ -1,33 +1,36 @@
 # Current Project State
 
 ## Current Sprint
-Sprint 1 — Database Connection, Auth & Module Development
+Sprint 1 — Database Connection, Auth, Profile & UI Theme System
 
 ## Current Task
-Implementasi Authentication / Login Admin (`/admin/login`) & Module Profile
+Verifikasi E2E Theme Gelap/Terang & Persiapan Modul 02: Skills & Tech Management
 
 ## Last Completed Task
-Integrasi Kredensial Supabase Cloud Aktif & Verifikasi Koneksi Database (`https://wvqwrnyounacpdzxtjih.supabase.co` Terkoneksi & Tabel Siap)
+- Inisialisasi akun Admin & Database Seeding (Admin, Storage bucket `portfolio-media`, Settings, Categories, Skills).
+- Modul Profile API (`GET /api/profile` publik & `PUT /api/profile` terproteksi).
+- Halaman Editor Profil CMS (`/admin/profile`) dengan dukungan upload avatar & resume PDF ke Supabase Storage.
+- Integrasi Profil Dinamis pada Website Publik (`HomePage.tsx`).
+- Fitur Tombol Gelap/Terang (Dark/Light Theme Toggle) dengan persistensi `localStorage`, CSS Variables adaptif, dan palet warna premium di Public, CMS Admin, dan Login Portal.
 
 ## Current Module
-Authentication & Profile
+Foundation / Theme System & Profile Management
 
 ## Known Issues
-Tidak ada (Koneksi Supabase Cloud terverifikasi dan endpoint healthcheck mengembalikan status healthy).
+Tidak ada. Seluruh build TypeScript (Client & Server) lulus 100% tanpa error.
 
 ## Blockers
-Tidak ada blocker. Koneksi database telah aktif.
+Tidak ada blocker.
 
 ## Next Recommended Action
-1. (Opsional) Jalankan skrip seed data awal di Bagian 4 database-setup.md jika ingin mengisi data default skill & settings.
-2. Lanjutkan pembuatan form dan logic login admin di `/admin/login` dengan Supabase Auth.
-3. Buat rute profile dan fetch data profil publik.
+1. Masuk ke panel CMS (`http://localhost:5173/admin/login`) dengan akun admin: `admin@firmanfarel.site` / `AdminFarel2026!#`.
+2. Uji pergantian tema gelap/terang di navbar publik dan header admin.
+3. Lanjutkan pengembangan Modul 02: **Skills & Tech Management** (`context/05-modules/skills.md`).
 
 ## Related Modules
-- `04-setup/database-setup.md`
-- `04-setup/local-development.md`
 - `05-modules/auth.md`
 - `05-modules/profile.md`
+- `05-modules/skills.md`
 
 ## Last Updated
-2026-09-05 18:45 WIB
+2026-09-05 19:35 WIB

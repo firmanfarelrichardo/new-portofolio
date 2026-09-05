@@ -4,6 +4,8 @@ import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import { ENV } from './config/env.js';
 import healthRoutes from './routes/health.routes.js';
+import authRoutes from './routes/auth.routes.js';
+import profileRoutes from './routes/profile.routes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
 const app: Application = express();
@@ -52,6 +54,8 @@ app.use('/api/', globalLimiter);
 
 // 5. Routes
 app.use('/api', healthRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
 
 // Root route
 app.get('/', (_req: Request, res: Response) => {
